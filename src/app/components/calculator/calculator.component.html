@@ -1,0 +1,20 @@
+<div class="w-100 bg-white d-flex  flex-column align-items-center justify-content-center" style="min-height: 80vh;">
+    <div style="width: auto; height: 100px;">
+        <h1 class="mb-5"><span *ngIf="isOperating">{{operacion}}</span>{{myNumber}}</h1>
+    </div>
+
+    <h1 class="text-primary">Calculadora Simple</h1>
+    <input [(ngModel)]="myNumber" class="form-control w-75 fs-1 text-center" type="number" (keypress)="limitKey($event)" (input)="wiperesult()" required/>
+
+    <div class="d-flex w-75 justify-content-evenly mt-5">
+        <button class="btn btn-success rounded-circle d-flex align-items-center justify-content-center" style="font-size: 50px; width: 75px; height: 75px;" (click)="operador('+')">+</button>
+        <button class="btn btn-success rounded-circle d-flex align-items-center justify-content-center" style="font-size: 50px; width: 75px; height: 75px;" (click)="operador('-')" >-</button>
+        <button class="btn btn-success rounded-circle d-flex align-items-center justify-content-center" style="font-size: 50px; width: 75px; height: 75px;" (click)="operador('*')">x</button>
+        <button class="btn btn-success rounded-circle d-flex align-items-center justify-content-center" style="font-size: 50px; width: 75px; height: 75px;"(click)="operador('/')" >/</button>
+        <button class="btn btn-success rounded-circle d-flex align-items-center justify-content-center" style="font-size: 50px; width: 75px; height: 75px;" (click)="operadorc()">C</button>
+    </div>
+    <button class="btn btn-primary d-flex align-items-center justify-content-center mt-5" style="font-size: 50px;" (click)="calcular()">Calcular!!</button>
+
+
+</div>
+

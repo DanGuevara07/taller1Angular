@@ -1,0 +1,9 @@
+<div class="w-100 bg-white d-flex  flex-column align-items-center justify-content-center" style="min-height: 80vh;">
+    <h1 class="text-primary">¿Es número primo?</h1>
+
+    <label for="primo"> <h2>Ingrese un número</h2> </label>
+    <input min="0"  class="form-control text-center bg-white border-secondary" id="primo" type="number"  style="width: auto; font-size: 50px; height: auto;" (keypress)="limitKey($event)" (input)="checkPrimo($event)">
+    <h1 *ngIf="isPrimo==0" class="mt-5 text-white">.</h1>
+    <h1 *ngIf="isPrimo==2" class="mt-5 text-danger">No es número primo</h1>
+    <h1 *ngIf="isPrimo==1" class="mt-5 text-success">Si es número primo</h1>
+</div>

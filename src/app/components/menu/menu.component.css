@@ -1,0 +1,4 @@
+.bg-personalized{
+    background: rgb(121,116,9);
+    background: linear-gradient(90deg, rgba(121,116,9,1) 49%, rgba(0,105,255,1) 100%);
+}

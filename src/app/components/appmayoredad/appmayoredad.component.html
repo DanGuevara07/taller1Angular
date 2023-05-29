@@ -1,0 +1,10 @@
+<div class="w-100 bg-white d-flex  flex-column align-items-center justify-content-center" style="min-height: 80vh;">
+    <h1 class="text-primary">¿Mayor de Edad?</h1>
+
+    <label for="edad"> <h2>Ingrese una edad</h2> </label>
+    <input min="0" max="150" class="form-control text-center bg-white border-secondary" id="edad" type="number"  style="width: 8%; font-size: 50px; height: auto;" (input)="limitMax($event)" (keypress)="limitKey($event)" (input)="checkAge($event)">
+
+    <h1 *ngIf="isAdult==0" class="mt-5 text-white">.</h1>
+    <h1 *ngIf="isAdult==2" class="mt-5 text-danger">No es mayor de edad</h1>
+    <h1 *ngIf="isAdult==1" class="mt-5 text-success">Si es mayor de edad</h1>
+</div>

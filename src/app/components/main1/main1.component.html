@@ -1,0 +1,29 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="button" style="position: absolute; z-index: 1; bottom: 15%; left: 47%;">
+            <app-button [name]="'Ir al menu'" [color]="'success'" [link]="'/appmenu'" ></app-button>
+      </div>  
+      <div class="carousel-item active" data-bs-interval="3000" >
+        <div class="w-100 bg-primary d-flex justify-content-center align-items-center text-white" style="min-height: 80vh;">
+            <h1>Bienvenido a la App Taller 1 en Angular</h1>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="w-100 bg-primary d-flex justify-content-center align-items-center p-5 text-white" style="min-height: 80vh;">
+            <h1>Use la barra de navegación o presione el botón para ir al menu de aplicaciones</h1>
+        </div>
+      </div>
+    </div>
+    <button hidden class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button hidden class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
